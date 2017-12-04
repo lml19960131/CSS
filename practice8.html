@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Grid布局</title>
+    <style>
+        .wrapper{
+            display: grid;
+            grid-template-columns: 100px 100px 100px ;
+            /*指定列数，从左到右的3个值分别代表3列的宽度*/
+            grid-template-rows: 50px 50px;
+            /*指定行数 从左到右的2个值分别代表两行的高度*/
+            margin-bottom: 100px;
+        }
+
+        .item1-1, .item2-1{
+            background-color: red;
+        }
+
+        .item1-2, .item2-2{
+            background-color: orange;
+        }
+
+        .item1-3, .item2-3{
+            background-color: yellow;
+        }
+
+        .item1-4, .item2-4{
+            background-color: green;
+        }
+
+        .item1-5, .item2-5{
+            background-color: blue;
+        }
+
+        .item1-6, .item2-6{
+            background-color: purple;
+        }
+
+        .wrapper2{
+            display: grid;
+            grid-template-columns: 100px 100px 100px;
+            grid-template-rows: 100px 100px 100px;
+        }
+
+        .item2-1{
+            grid-column-start: 1;
+            /*指定item2-1从行第一条网格线开始到第四条网格线结束*/
+            grid-column-end: 4;
+        }
+
+        .item2-4{
+            grid-row-start: 2;
+            /*指定item2-4从列的第二条网格线开始到第四条网格线结束*/
+            grid-row-end: 4;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="item1-1">1</div>
+        <div class="item1-2">2</div>
+        <div class="item1-3">3</div>
+        <div class="item1-4">4</div>
+        <div class="item1-5">5</div>
+        <div class="item1-6">6</div>
+    </div>
+
+    <div class="wrapper2">
+        <div class="item2-1">从行的第一条网格线开始</div>
+        <div class="item2-2">2</div>
+        <div class="item2-3">3</div>
+        <div class="item2-4">从列的第二条网格线开始</div>
+        <div class="item2-5">5</div>
+        <div class="item2-6">6</div>
+    </div>
+</body>
+</html>
