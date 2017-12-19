@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>导航菜单</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-size: 14px;
+        }
+        ul{
+            list-style: none;
+            border-bottom: 5px solid #f60;
+            height: 50px;
+            padding-left: 30px;
+        }
+        li{
+            float: left;
+        }
+        a{
+            text-decoration: none;
+            display: block;
+            line-height: 30px;
+            height: 30px;
+            width: 100px;
+            background-color: grey;
+            margin-bottom: 1px;
+            text-align: center;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            margin-top: 20px;
+        }
+        .on,a:hover{
+            background-color: #f60;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>
+            <a href="#" class="on">1</a>
+        </li>
+        <li>
+            <a href="#">2</a>
+        </li>
+        <li>
+            <a href="#">3</a>
+        </li>
+        <li>
+            <a href="#">4</a>
+        </li>
+        <li>
+            <a href="#">5</a>
+        </li>
+    </ul>
+<script>
+    var  a = document.getElementsByTagName('a');
+    for(var i = 0; i<=a.length; i++){
+        a[i].onmouseover=function () {
+            var This = this;
+            This.time1=setInterval(function () {
+                This.style.width= This.offsetWidth+8+'px';
+                if(This.offsetWidth>=160){
+                    clearInterval(This.time1);
+                }
+            },30)
+        };
+
+        a[i].onmouseout=function () {
+            var This = this;
+            This.time=setInterval(function () {
+                This.style.width = This.offsetWidth-8+'px';
+                if(This.offsetWidth<=120){
+                    clearInterval(This.time)
+                }
+            },30)
+        }
+    }
+</script>
+</body>
+</html>
