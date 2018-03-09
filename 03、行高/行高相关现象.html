@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>line-height</title>
+    <style>
+        .div1{
+            border: 1px solid red;
+        }
+        .div1>span{
+            background-color: blue;
+            color: #ffffff;
+            font-size: 20px;
+            line-height: 60px;
+        }
+
+        .div2>.c1{
+            font-size: 12px;
+        }
+        .div2>.c2{
+            font-size: 20px;
+        }
+        .div2>.c3{
+            font-size: 28px;
+        }
+
+        .div3{
+            background-color: red;
+        }
+        img{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="div1">
+        <span>行高决定上下多余宽度,我是垂直居中的</span>
+    </div>
+
+    <!--文本默认是按照基线对齐-->
+    <div class="div2">
+        <span class="c1">第一段</span>
+        <span class="c2">第二段</span>
+        <span class="c3">第三段</span>
+    </div>
+
+
+    <div class="div3">
+        <span>文字</span>
+        <img src="timg.jpg">
+    </div>
+
+
+    <div></div>
+</body>
+</html>
